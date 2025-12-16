@@ -255,6 +255,7 @@ body {
 /* ==================== NAVBAR MÓVIL – VERSIÓN FINAL: SIN BLUR (0%) + TRANSPARENTE TOTAL ==================== */
 
 @media (max-width: 1023px) {
+
   /* 1. Solo logo imagen */
   .logo span,
   .logo strong {
@@ -297,16 +298,18 @@ body {
     background: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    border-bottom: 1px solid rgba(97, 218, 248, 0.05) !important; /* borde casi invisible */
+    border-bottom: 1px solid rgba(97, 218, 248, 0.05) !important;
+    /* borde casi invisible */
     transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
-                border-bottom 0.4s ease;
+      border-bottom 0.4s ease;
   }
 
   /* Al aparecer (scroll up) → sigue transparente, SIN BLUR */
   .navbar.visible {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    border-bottom: 1px solid rgba(97, 218, 248, 0.08) !important; /* un toque más visible si querés */
+    border-bottom: 1px solid rgba(97, 218, 248, 0.08) !important;
+    /* un toque más visible si querés */
   }
 
   /* Ocultar al scroll down */
@@ -761,13 +764,16 @@ body {
 
 /* ==================== POSICIÓN DEL BOTÓN EN INICIO (TABLET / MÓVIL) ==================== */
 @media (max-width: 1200px) {
+
   /* Hacemos que el wrapper del dropdown se posicione sobre el contenido
      para que al desplegar el menu no empuje ni tape la siguiente sección */
   #inicio .dropdown-wrapper {
     position: absolute !important;
     width: 90%;
-    top: 10% !important; /* Ajustable: 10% reduce solapamiento */
-    left: 6% !important; /* Mantenerlo cercano al borde izquierdo */
+    top: 10% !important;
+    /* Ajustable: 10% reduce solapamiento */
+    left: 6% !important;
+    /* Mantenerlo cercano al borde izquierdo */
     z-index: 120 !important;
     pointer-events: auto !important;
     transform: none !important;
@@ -782,6 +788,7 @@ body {
 }
 
 @media (max-width: 480px) {
+
   /* En móviles muy estrechos centramos el botón horizontalmente y lo subimos un poco */
   #inicio .dropdown-wrapper {
     top: 8% !important;
@@ -806,7 +813,7 @@ body {
   }
 
   /* Forzar que los hijos queden en línea y no hagan wrap */
-  .keep-inline > * {
+  .keep-inline>* {
     display: inline-block !important;
     white-space: nowrap !important;
     overflow: hidden !important;
@@ -819,7 +826,7 @@ body {
       gap: 0.35rem !important;
     }
 
-    .keep-inline > * {
+    .keep-inline>* {
       font-size: clamp(1.4rem, 6.5vw, 2.2rem) !important;
     }
   }
@@ -829,6 +836,7 @@ body {
 /* ==================== GLASS-BTN RESPONSIVE OVERRIDES ==================== */
 /* Tablet (481px–1200px): botón 60% ancho, dropdown 70% */
 @media (min-width: 481px) and (max-width: 1200px) {
+
   #inicio .dropdown-trigger,
   #inicio .glass-btn {
     width: 60% !important;
@@ -848,6 +856,7 @@ body {
 
 /* Móvil pequeño (<=480px): botón 90% ancho, dropdown 95% */
 @media (max-width: 480px) {
+
   #inicio .dropdown-trigger,
   #inicio .glass-btn {
     width: 90% !important;
@@ -1655,8 +1664,9 @@ body {
   }
 
   .nosotros-subtitle {
-    font-size: clamp(0.85rem, 3.5vw, 1rem) !important;
-    line-height: 1.5;
+    font-size: clamp(0.68rem, 2.8vw, 0.8rem) !important;
+    line-height: 1.2 !important;
+    text-align: justify !important;
     width: 100%;
     max-width: 90%;
     margin: 0 auto;
@@ -1761,12 +1771,43 @@ body {
   }
 
   .nosotros-subtitle {
-    font-size: 0.8rem !important;
+    font-size: 0.65rem !important;
     /* Texto pequeño y nítido */
-    line-height: 1.4;
+    line-height: 1.2 !important;
+    text-align: justify !important;
     padding: 0 0.5rem !important;
     width: 100% !important;
     margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .nosotros-title {
+    font-size: clamp(1.2rem, 5vw, 1.5rem) !important;
+  }
+
+  .nosotros-title .line-2,
+  .nosotros-title .line-5 {
+    font-size: 1.3rem !important;
+  }
+
+  .nosotros-subtitle {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .nosotros-title {
+    font-size: 1.1rem !important;
+  }
+
+  .nosotros-title .line-2,
+  .nosotros-title .line-5 {
+    font-size: 1.2rem !important;
+  }
+
+  .nosotros-subtitle {
+    font-size: 0.7rem !important;
   }
 }
 
@@ -2228,8 +2269,9 @@ body {
   }
 
   .branding-subtitle {
-    font-size: clamp(1rem, 4vw, 1.25rem) !important;
-    text-align: center;
+    font-size: clamp(0.8rem, 3.2vw, 1rem) !important;
+    text-align: justify !important;
+    line-height: 1.2 !important;
     margin: 0 auto;
     max-width: 95% !important;
   }
@@ -2280,6 +2322,37 @@ body {
 }
 
 
+
+
+@media (max-width: 390px) {
+  .branding-title {
+    font-size: 2.5rem !important;
+  }
+
+  .branding-title .line-1a,
+  .branding-title .line-1b,
+  .branding-title .line-2 {
+    font-size: 2.5rem !important;
+  }
+
+  .branding-title .line-3 {
+    font-size: 4rem !important;
+  }
+
+  .branding-subtitle {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .branding-title {
+    font-size: 2.2rem !important;
+  }
+
+  .branding-subtitle {
+    font-size: 0.7rem !important;
+  }
+}
 
 
 /* ==================== MARKETING DIGITAL – SECCIÓN ÉPICA ==================== */
@@ -2831,7 +2904,9 @@ body {
   }
 
   .marketing-digital-subtitle {
-    font-size: clamp(0.85rem, 3.5vw, 1.1rem) !important;
+    font-size: clamp(0.68rem, 2.8vw, 0.9rem) !important;
+    line-height: 1.2 !important;
+    text-align: justify !important;
     margin: 1rem auto 0 auto !important;
     /* Centrado y margen top reducido */
     padding-left: 0 !important;
@@ -2870,6 +2945,55 @@ body {
 
   .project-card[active] {
     height: 22vh !important;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .marketing-digital-title .line-1 {
+    font-size: 1.8rem !important;
+  }
+
+  .marketing-digital-title .line-2 {
+    font-size: 2.2rem !important;
+  }
+
+  .marketing-digital-title .line-3 {
+    font-size: 1.6rem !important;
+  }
+
+  .marketing-digital-title .line-4 {
+    font-size: 2.2rem !important;
+  }
+
+  .marketing-digital-title .line-5 {
+    font-size: 2.5rem !important;
+  }
+
+  .marketing-digital-subtitle {
+    font-size: 0.75rem !important;
+  }
+
+  .project-card[active] {
+    height: 20vh !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .marketing-digital-title .line-1 {
+    font-size: 1.6rem !important;
+  }
+
+  .marketing-digital-title .line-2 {
+    font-size: 2rem !important;
+  }
+
+  .marketing-digital-title .line-5 {
+    font-size: 2.2rem !important;
+  }
+
+  .marketing-digital-subtitle {
+    font-size: 0.7rem !important;
   }
 }
 
@@ -3352,8 +3476,9 @@ body {
 
   /* Subtítulo */
   .diseno-grafico-subtitle {
-    font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
-    text-align: center !important;
+    font-size: clamp(0.8rem, 2.8vw, 1rem) !important;
+    line-height: 1.2 !important;
+    text-align: justify !important;
     max-width: 90% !important;
     padding-left: 0 !important;
     margin: 1.5rem auto 0 auto !important;
@@ -3367,6 +3492,52 @@ body {
   .diseno-grafico-right {
     height: 50% !important;
     /* Usar % relativo al padre 100vh */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .diseno-grafico-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .diseno-grafico-title .line-1,
+  .diseno-grafico-title .line-3 {
+    font-size: 2rem !important;
+  }
+
+  .diseno-grafico-title .line-2,
+  .diseno-grafico-title .line-4 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .diseno-grafico-title .line-1,
+  .diseno-grafico-title .line-3 {
+    font-size: 1.8rem !important;
+  }
+
+  .diseno-grafico-title .line-2,
+  .diseno-grafico-title .line-4 {
+    font-size: 2.2rem !important;
+  }
+
+  .diseno-grafico-subtitle {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .diseno-grafico-title .line-1,
+  .diseno-grafico-title .line-3 {
+    font-size: 1.6rem !important;
+  }
+
+  .diseno-grafico-subtitle {
+    font-size: 0.7rem !important;
   }
 }
 
@@ -3834,8 +4005,9 @@ body {
   }
 
   .produccion-subtitle {
-    font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
-    text-align: center !important;
+    font-size: clamp(0.8rem, 2.8vw, 1rem) !important;
+    line-height: 1.2 !important;
+    text-align: justify !important;
     padding-left: 0 !important;
     margin-top: 1.5rem !important;
     max-width: 90% !important;
@@ -3873,6 +4045,47 @@ body {
     transform: scale(0.75);
   }
 }
+
+@media (max-width: 390px) {
+  .padre-iphone {
+    transform: scale(0.65);
+  }
+
+  .produccion-title .line:nth-child(1) {
+    font-size: 3rem !important;
+  }
+
+  .produccion-title .line:nth-child(2) {
+    font-size: 3.5rem !important;
+  }
+
+  .produccion-title .line:nth-child(3) {
+    font-size: 4rem !important;
+  }
+
+  .produccion-subtitle {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .padre-iphone {
+    transform: scale(0.6);
+  }
+
+  .produccion-title .line:nth-child(1) {
+    font-size: 2.5rem !important;
+  }
+
+  .produccion-title .line:nth-child(2) {
+    font-size: 3rem !important;
+  }
+
+  .produccion-subtitle {
+    font-size: 0.7rem !important;
+  }
+}
+
 
 /* ==================== 5) SECCIÓN DESARROLLO WEB ==================== */
 
@@ -4000,7 +4213,9 @@ body {
   }
 
   .desarrollo-subtitle {
-    font-size: clamp(1rem, 3vw, 1.3rem) !important;
+    font-size: clamp(0.8rem, 2.4vw, 1rem) !important;
+    line-height: 1.2 !important;
+    text-align: justify !important;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -4063,7 +4278,9 @@ body {
   }
 
   .desarrollo-subtitle {
-    font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+    font-size: clamp(0.72rem, 2.8vw, 0.9rem) !important;
+    line-height: 1.2 !important;
+    text-align: justify !important;
   }
 
   /* ========================================================================== */
@@ -4135,6 +4352,42 @@ body {
   }
 
   /* ========================================================================== */
+}
+
+
+@media (max-width: 390px) {
+  .desarrollo-switch {
+    top: 15% !important;
+    left: 10% !important;
+    scale: 0.45;
+  }
+
+  .desarrollo-title {
+    font-size: 2rem !important;
+  }
+
+  .desarrollo-title .line {
+    font-size: 2rem !important;
+  }
+
+  .desarrollo-subtitle {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .desarrollo-switch {
+    left: 5% !important;
+    scale: 0.4;
+  }
+
+  .desarrollo-title {
+    font-size: 1.8rem !important;
+  }
+
+  .desarrollo-subtitle {
+    font-size: 0.7rem !important;
+  }
 }
 
 
