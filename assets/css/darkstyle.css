@@ -1,0 +1,2 @@
+/* Dark mode extra – por si después queremos toggle */
+body.dark { background: #000 !important; }
