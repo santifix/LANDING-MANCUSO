@@ -4312,7 +4312,7 @@ body {
 @media (min-width: 360px) and (max-width: 400px) {
   .desarrollo-switch {
     /* 🔧 AJUSTA AQUÍ SOLO PARA ESTOS MODELOS */
-    top: 15% !important;
+    top: 25% !important;
     /* Posición vertical */
     left: 10% !important;
     /* Posición horizontal */
@@ -4339,7 +4339,7 @@ body {
     scale: 0.5;
 
     /* 🔧 POSICIÓN VERTICAL - Ajusta este valor para mover el switch arriba/abajo */
-    top: 18%;
+    top: 27%;
 
     /* 🔧 POSICIÓN HORIZONTAL - Ajusta este valor para mover el switch izquierda/derecha */
     left: 13%;
@@ -4357,7 +4357,7 @@ body {
 
 @media (max-width: 390px) {
   .desarrollo-switch {
-    top: 15% !important;
+    top: 23% !important;
     left: 10% !important;
     scale: 0.45;
   }
